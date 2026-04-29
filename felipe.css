@@ -292,10 +292,12 @@ h1 {
     z-index: 999;
 }
 .Tempo {
-    display: flex;
-    justify-content: center;
-    align-itens: center;
+    text-align: center;
+    color: #facc15;
+    margin-top: 5px;
+    font-weight: bold;
 }
+
 
 
 
