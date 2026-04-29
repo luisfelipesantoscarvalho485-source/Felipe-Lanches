@@ -120,10 +120,7 @@ function avaliar(valor) {
 function enviarFeedback() {
     const texto = document.getElementById("feedback").value;
 
-    if (nota === 0) {
-        alert("Escolha uma nota antes de enviar No Final Do Cardápio");
-        return;
-    }
+   
 
     const numero = "5521983609954";
 
