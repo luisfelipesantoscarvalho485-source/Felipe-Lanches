@@ -293,7 +293,7 @@ h1 {
 }
 .Feedback{
     display: flex;
-    text-align: center;
+    justify-content: center;
 }
 
 
