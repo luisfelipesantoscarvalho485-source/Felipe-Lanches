@@ -260,12 +260,14 @@ h1 {
     cursor: pointer;
     color: #555;
     transition: 0.2s;
+     font-size: 30px;
 }
 
 /* estrelas ativadas */
 .estrelas span.ativa {
     color: gold;
 }
+
 
 
 
@@ -289,6 +291,8 @@ h1 {
     width: 300px;
     text-align: center;
     color: white;
+    position: relative;
+    z-index: 1001;
 }
 #btn-avaliar {
     position: fixed;
