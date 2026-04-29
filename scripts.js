@@ -172,10 +172,11 @@ function gerarMensagem() {
     const mesa = document.getElementById("mesa").value;
     const pagamento = document.getElementById("pagamento").value;
 
-    if (carrinho.length === 0) {
-    alert("Adicione pelo menos 1 item ao carrinho!");
+   if (carrinho.length === 0) {
+    toast("Adicione itens ao carrinho 🛒");
     return null;
 }
+
 
 
     if (!mesa) {
@@ -200,7 +201,7 @@ function gerarMensagem() {
     mensagem += `📍 Mesa: ${mesa}\n\n`;
      mensagem += `💳 Pagamento: ${pagamento}\n\n`;
 
-     mensagem += `Avaliação Do Cliente: ${nota}⭐\n\n;`
+     mensagem += `Avaliação Do Cliente: ${nota} estrelas\n\n;`
 
     let total = 0;
 
