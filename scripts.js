@@ -172,6 +172,12 @@ function gerarMensagem() {
     const mesa = document.getElementById("mesa").value;
     const pagamento = document.getElementById("pagamento").value;
 
+    if (carrinho.length === 0) {
+    alert("Adicione pelo menos 1 item ao carrinho!");
+    return null;
+}
+
+
     if (!mesa) {
         alert("Digite o número da mesa!");
         return null;
