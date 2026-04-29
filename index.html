@@ -229,22 +229,30 @@
 <a id="btn-whatsapp" target="_blank">📲 Fazer Pedido</a>
     <p style="font-size: 12px; color: #9ca3af; text-align:center;">Pedidos enviados direto para o WhatsApp do estabelecimento</p>
 
+    <button id="btn-avaliar" onclick="abrirFeedback()">
+    ⭐ Avaliar
+</button>
 
-<div class="feedback-box">
-    <h2>⭐ Avaliação</h2>
 
-    <div class="estrelas">
-        <span onclick="avaliar(1)">★</span>
-        <span onclick="avaliar(2)">★</span>
-        <span onclick="avaliar(3)">★</span>
-        <span onclick="avaliar(4)">★</span>
-        <span onclick="avaliar(5)">★</span>
+<div id="popup-feedback" class="popup">
+    <div class="popup-content">
+        <h2>⭐ Avaliação</h2>
+
+        <div class="estrelas">
+            <span onclick="avaliar(1)">★</span>
+            <span onclick="avaliar(2)">★</span>
+            <span onclick="avaliar(3)">★</span>
+            <span onclick="avaliar(4)">★</span>
+            <span onclick="avaliar(5)">★</span>
+        </div>
+
+        <textarea id="feedback" placeholder="Deixe sua opinião..."></textarea>
+
+        <button onclick="enviarFeedback()">Enviar</button>
+        <button onclick="fecharFeedback()">Fechar</button>
     </div>
-
-    <textarea id="feedback" placeholder="Deixe sua opinião..."></textarea>
-
-    <button onclick="enviarFeedback()">Enviar</button>
 </div>
+
 
 
     <script src="scripts.js"></script>
