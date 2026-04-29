@@ -117,6 +117,7 @@ function avaliar(valor) {
         }
     });
 }
+
 function enviarFeedback() {
     const texto = document.getElementById("feedback").value;
 
