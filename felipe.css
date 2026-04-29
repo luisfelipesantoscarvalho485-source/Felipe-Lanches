@@ -314,6 +314,13 @@ h1 {
     max-width: 300px;
     text-align: center;
 }
+#btn-avaliar {
+    position: fixed !important;
+    bottom: 100px !important;
+    right: 20px !important;
+    background: red !important;
+}
+
 
 
 
