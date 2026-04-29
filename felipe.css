@@ -292,6 +292,7 @@ h1 {
     z-index: 999;
 }
 .Feedback{
+    display: flex;
     text-align: center;
 }
 
