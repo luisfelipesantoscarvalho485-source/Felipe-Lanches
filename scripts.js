@@ -118,28 +118,37 @@ function avaliar(valor) {
     });
 }
 
+let comentario = "";
+
 function enviarFeedback() {
-    const texto = document.getElementById("feedback").value;
+    comentario = document.getElementById("feedback").value;
 
-   
+    const mensagem = gerarMensagem();
 
-    const numero = "5521983609954";
+    if (!mensagem) return;
 
-    let mensagem = `⭐ Avaliação - Felipe Lanches\n`;
-    mensagem += `Nota: ${nota} estrelas\n`;
+    window.open(`https://wa.me/${numero}?text=${mensagem}`, "_blank");
 
-    if (texto) {
-        mensagem += `Comentário: ${texto}\n`;
-    }
+    mostrarToast("Pedido + Feedback enviados ✅");
+    fecharFeedback();
 
-    const link = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
-    window.open(link, "_blank");
+    setTimeout(() => {
+        document.getElementById("mesa").value = "";
 
-    // limpar depois
-    nota = 0;
-    document.getElementById("feedback").value = "";
-    document.querySelectorAll(".estrelas span").forEach(e => e.classList.remove("ativa"));
+        nota = 0;
+        comentario = "";
+        document.getElementById("feedback").value = "";
+
+        document.querySelectorAll(".estrelas span")
+            .forEach(e => e.classList.remove("ativa"));
+
+        carrinho = [];
+        localStorage.removeItem("carrinho");
+
+        atualizarCarrinho();
+    }, 1000);
 }
+
 function gerarNumeroPedido() {
     let numero = localStorage.getItem("pedidoNumero");
 
@@ -190,17 +199,17 @@ function gerarMensagem() {
 
 
     if (!mesa) {
-        alert("Digite o número da mesa!");
+        mostrarToast("Digite o número da mesa!");
         return null;
     }
     if (!pagamento) {
-        alert("Escolha A Forma De Pagamento!");
+        mostrarToast("Escolha A Forma De Pagamento!");
         return null;
     }
 
     if (nota === 0) {
-    alert("Avalie com estrelas antes de finalizar o pedido! Seu Feedback Importa😀");
-    return;
+    mostrarToast("Avalie com estrelas antes de finalizar o pedido! Seu Feedback Importa😀");
+    return null;
 }
      const numeroPedido = gerarNumeroPedido();
      const horario = pegarHorario();
@@ -211,7 +220,12 @@ function gerarMensagem() {
     mensagem += `📍 Mesa: ${mesa}\n\n`;
      mensagem += `💳 Pagamento: ${pagamento}\n\n`;
 
-     mensagem += `Avaliação Do Cliente: ${nota} estrelas\n\n`;
+    mensagem += `Avaliação Do Cliente: ${nota} estrelas\n\n`;
+
+if (comentario.trim() !== "") {
+    mensagem += `💬 Comentário: ${comentario}\n\n`;
+}
+
 
     let total = 0;
 
@@ -230,21 +244,6 @@ const numero = "5521983609954"; // coloca o número do dono
 
 const btn = document.getElementById("btn-whatsapp");
 
-btn.addEventListener("click", () => {
-    const mensagem = gerarMensagem();
+btn.addEventListener("click", enviarFeedback);
+   
 
-    if (!mensagem) return null;
-    btn.href = `https://wa.me/${numero}?text=${mensagem}`;
-    setTimeout(() => {
-        document.getElementById("mesa").value = "";
-        nota = 0;
-document.querySelectorAll(".estrelas span").forEach(e => e.classList.remove("ativa"));
-
-
-        carrinho = [];
-        localStorage.removeItem("carrinho");
-
-         atualizarCarrinho();
-        mostrarToast("Pedido Enviado ✅")
-    },1000);
-});
