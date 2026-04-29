@@ -182,7 +182,7 @@ function gerarMensagem() {
     const pagamento = document.getElementById("pagamento").value;
 
    if (carrinho.length === 0) {
-    toast("Adicione itens ao carrinho 🛒");
+    mostrarToast("Adicione itens ao carrinho 🛒");
     return null;
 }
 
@@ -210,7 +210,7 @@ function gerarMensagem() {
     mensagem += `📍 Mesa: ${mesa}\n\n`;
      mensagem += `💳 Pagamento: ${pagamento}\n\n`;
 
-     mensagem += `Avaliação Do Cliente: ${nota} estrelas\n\n;`
+     mensagem += `Avaliação Do Cliente: ${nota} estrelas\n\n`;
 
     let total = 0;
 
@@ -232,15 +232,13 @@ const btn = document.getElementById("btn-whatsapp");
 btn.addEventListener("click", () => {
     const mensagem = gerarMensagem();
 
-     if (nota === 0) {
-        alert("Avalie com estrelas antes de finalizar o pedido! Porfavor seu Feedback e muito importante");
-        return;
-    }
-
-    if (!mensagem) return;
+    if (!mensagem) return null;
     btn.href = `https://wa.me/${numero}?text=${mensagem}`;
     setTimeout(() => {
         document.getElementById("mesa").value = "";
+        nota = 0;
+document.querySelectorAll(".estrelas span").forEach(e => e.classList.remove("ativa"));
+
 
         carrinho = [];
         localStorage.removeItem("carrinho");
