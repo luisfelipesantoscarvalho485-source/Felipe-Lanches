@@ -291,6 +291,9 @@ h1 {
     cursor: pointer;
     z-index: 999;
 }
+.Feedback{
+    text-align: center;
+}
 
 
 
