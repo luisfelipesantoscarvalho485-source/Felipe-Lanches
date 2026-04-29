@@ -160,6 +160,15 @@ function pegarHorario() {
     });
 }
 
+function abrirFeedback() {
+    document.getElementById("popup-feedback").style.display = "flex";
+}
+
+function fecharFeedback() {
+    document.getElementById("popup-feedback").style.display = "none";
+}
+
+
 
 
 
