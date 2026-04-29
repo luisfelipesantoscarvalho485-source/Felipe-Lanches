@@ -220,7 +220,7 @@ btn.addEventListener("click", () => {
     const mensagem = gerarMensagem();
 
      if (nota === 0) {
-        alert("Avalie com estrelas antes de finalizar o pedido!Porfavor seu Feedback e muito importante");
+        toast("Avalie com estrelas antes de finalizar o pedido! Porfavor seu Feedback e muito importante");
         return;
     }
 
