@@ -250,12 +250,25 @@ h1 {
     color: white;
     margin: 20px;
 }
-
 .estrelas {
-    font-size: 25px;
-    cursor: pointer;
+    font-size: 30px;
     margin: 10px 0;
 }
+
+/* estrelas normais */
+.estrelas span {
+    cursor: pointer;
+    color: #555;
+    transition: 0.2s;
+}
+
+/* estrelas ativadas */
+.estrelas span.ativa {
+    color: gold;
+}
+
+
+
 .popup {
     display: none;
     position: fixed;
