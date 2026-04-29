@@ -294,6 +294,7 @@ h1 {
 .Tempo {
     display: flex;
     justify-content: center;
+    align-itens: center;
 }
 
 
