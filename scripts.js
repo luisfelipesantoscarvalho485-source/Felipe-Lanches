@@ -185,7 +185,7 @@ function gerarMensagem() {
     }
 
     if (nota === 0) {
-    alert("Avalie com estrelas antes de finalizar o pedido!");
+    alert("Avalie com estrelas antes de finalizar o pedido! Seu Feedback Importa😀");
     return;
 }
      const numeroPedido = gerarNumeroPedido();
@@ -220,7 +220,7 @@ btn.addEventListener("click", () => {
     const mensagem = gerarMensagem();
 
      if (nota === 0) {
-        toast("Avalie com estrelas antes de finalizar o pedido! Porfavor seu Feedback e muito importante");
+        alert("Avalie com estrelas antes de finalizar o pedido! Porfavor seu Feedback e muito importante");
         return;
     }
 
