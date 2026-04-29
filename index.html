@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="felipe.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cardápio Online</title>
+    <div class="mesa-box">
+    <label>Nº da mesa:</label>
+    <input type="number" id="mesa" placeholder="Ex: 5">
+</div>
+
+</head>
+<body>
+    <header>🍔 Felipe Lanches</header>
+    
+    <p class="Feedback">📩 Feedback No Final Da Página</p>
+
+    <p style="text-align:center; color:#22c55e;">
+📲 Informe sua mesa e faça seu pedido
+</p>
+   <P class="Feedback">IMAGENS ILUSTRATIVAS</P>
+<div class="pagamento-box">
+    <label>💳 Pagamento:</label>
+    <select id="pagamento">
+        <option value="">Escolha</option>
+        <option value="Pix">Pix</option>
+        <option value="Dinheiro">Dinheiro</option>
+        <option value="Cartão">Cartão</option>
+    </select>
+</div>
+
+
+    <main>
+        <div class="menu">
+        <div class="Itens">
+            <div class="carrinho-box">
+    <h2>🛒 Carrinho</h2>
+
+    <ul id="lista-carrinho"></ul>
+
+    <p id="total">Total: R$ 0,00</p>
+</div>
+
+
+        <div class="Burger">
+            <h2>Lanches</h2> 
+        <img src="https://api-middleware-mcd.mcdonaldscupones.com/media/image/product$Cheeseburger.png/200/200/original?country=br"> 
+        <h2>Chesseburger - R$ 12,00</h2>
+        <p>(Pão, Carne, Queijo)</p>
+        <button onclick="adicionar('Chesseburger', 12)">
+            Adicionar
+        </button>
+        </div>
+        
+        <div class="Burger">
+            <img src="img/hot.png.png">
+        <h2>Hot-Dog - R$ 10,00</h2>
+        <p>(Pão, Salsicha)</p>
+        <button onclick="adicionar('Hot-Dog', 10)">
+            Adicionar
+        </button>
+        </div>
+
+        <div class="Burger">
+            <img src="img/ChatGPT Image 29 de abr. de 2026, 04_45_14.png">
+        <h2> X-Tudo - R$ 15,00</h2>
+        <p>(Pão, Carne, Queijo, Presunto, Bacon, Ovo)</p>
+         <button onclick="adicionar('X-Tudo', 15)">
+            Adicionar
+        </button>
+        </div> 
+        
+        <div class="Burger">
+            <img src="img/ChatGPT Image 29 de abr. de 2026, 04_54_56.png">
+        <h2>Galiss Burger - R$ 18,00</h2>
+        <p>(Pão, Carne, Queijo, Frango, Cheddar)</p>
+         <button onclick="adicionar('Galiss Burger', 18)">
+            Adicionar
+        </button>
+        </button>
+
+        </div>
+        
+        <div class="Burger">
+            <img src="img/Gemini_Generated_Image_93ugs593ugs593ug.png">
+        <h2>X-Bacon - R$ 15,00</h2>
+        <p>(Pão, Carne, Queijo, Presunto, Bacon)</p>
+         <button onclick="adicionar('Chesseburger', 15)">
+            Adicionar
+        </button>
+        </div>
+        
+        <div class="Burger">
+            <img src="img/Gemini_Generated_Image_32q9e132q9e132q9.png">
+        <h2>X-Egss - R$ 14,00</h2>
+        <p>(Pão, Carne, Queijo, Presunto, Ovo)</p>
+         <button onclick="adicionar('X-Egss', 14)">
+            Adicionar
+        </button>
+
+        </div>
+        
+        <div class="Burger">
+            <img src="img/Gemini_Generated_Image_gsn4xygsn4xygsn4.png">
+        <h2>X-Salada - R$ 16,00</h2>
+        <P>(Pão, Carne, Queijo, Presunto, Alface, Tomate)</P>
+         <button onclick="adicionar('X-Salada', 16)">
+            Adicionar
+        </button>
+        </div>
+    
+        <div class="Burger">
+            <img src="img/Gemini_Generated_Image_ecpbo7ecpbo7ecpb.png">
+        <h2>Furioso - 22,00</h2>
+        <p>(Pão, 2 Carne, 2 Queijo, Frango, Cheddar)</p>
+         <button onclick="adicionar('Furioso', 22)">
+            Adicionar
+        </button>
+        </div>
+        </div>
+    
+    
+    <div class="coluna">
+    <h2>🥤 Bebidas</h2>
+        
+        <div class="Burger">
+        <img src="img/Gemini_Generated_Image_py1pwtpy1pwtpy1p.png">   
+        <p>Coca-Cola Lata - R$ 6,00</p>
+         <button onclick="adicionar('Coca-Cola Lata', 6)">
+            Adicionar
+        </button>
+        </div>
+
+        
+        <div class="Burger">
+         <img src="img/Gemini_Generated_Image_7r0mvt7r0mvt7r0m.png"> 
+        <p>Fanta Lata - 6,00</p>
+         <button onclick="adicionar('Fanta Lata', 6)">
+            Adicionar
+        </button>
+        </div>
+        
+        <div class="Burger">
+            <img src="img/Gemini_Generated_Image_42lrgy42lrgy42lr.png">
+        <p>Heineken Long Neck 300ml - R$12,00</p>
+         <button onclick="adicionar('Heineken Long Neck', 12)">
+            Adicionar
+        </button>
+        </div>
+        
+        <div class="Burger">
+         <img src="img/Gemini_Generated_Image_gy8mo0gy8mo0gy8m.png">  
+        <p>Guaracamp - 3,00</p>
+         <button onclick="adicionar('Guaracamp', 3)">
+            Adicionar
+        </button>
+        </div>
+
+        <div class="Burger">
+        <img src="img/ChatGPT Image 29 de abr. de 2026, 06_15_06.png">    
+        <p>Guaraviton - 5,00</p>
+        <button onclick="adicionar('Guaraviton', 5)">
+            Adicionar
+        </button>
+        </div>
+         
+        <div class="Burger">
+        <img src="img/ChatGPT Image 29 de abr. de 2026, 06_07_25.png">  
+        <p>Latão - 8,00</p>
+        <p>(Antartica, Skol, Itaipava)</p>
+        <button onclick="adicionar('Latão', 8)">
+            Adicionar
+        </button>
+        </div>
+
+        
+    
+</div>   
+
+     <div class="coluna">
+    <h2>🍟 Acompanhamentos</h2>
+        
+        <div class="Burger">
+        <img src="img/Gemini_Generated_Image_jov8lejov8lejov8.png">   
+        <p>Batata Maluca - R$ 25,00</p>
+        <button onclick="adicionar('Batata Maluca', 25)">
+            Adicionar
+        </button>
+        </div>
+        
+        <div class="Burger">
+        <img src="img/Gemini_Generated_Image_ai4fy9ai4fy9ai4f.png">
+        <p>Porção Nuggets 10 uni - R$ 12,00</p>
+        <button onclick="adicionar('Porção Nuggets', 12)">
+            Adicionar
+        </button>
+        </div>
+        
+        <div class="Burger">
+        <img src="img/Gemini_Generated_Image_ilwrmyilwrmyilwr.png">
+        <p>Porção De salgadinho 10 uni - R$ 12,00</p>
+        <button onclick="adicionar('Porção De Salgadinho 10 uni', 12)">
+            Adicionar
+        </button>
+        </div>
+        <div class="Burger">
+        <img src="img/ChatGPT Image 29 de abr. de 2026, 06_31_21.png">
+        <p>Porção De Batata Meia - R$ 12,00</p>
+        <button onclick="adicionar('Porção De Batata Meia', 12)">
+            Adicionar
+        </button>
+        </div>
+        
+        <div class="Burger">
+         <img src="img/ChatGPT Image 29 de abr. de 2026, 06_31_21.png">
+        <p>Porção De Batata Inteira - R$ 20,00</p>
+        <button onclick="adicionar('Porção De Batata Inteira', 20)">
+            Adicionar
+        </button>
+        </div>
+
+        </div>
+    </div>
+</main>
+     
+<div id="toast">Item adicionado ao carrinho 🛒</div>
+
+<a id="btn-whatsapp" target="_blank">📲 Fazer Pedido</a>
+
+<div class="feedback-box">
+    <h2>⭐ Avaliação</h2>
+
+    <div class="estrelas">
+        <span onclick="avaliar(1)">★</span>
+        <span onclick="avaliar(2)">★</span>
+        <span onclick="avaliar(3)">★</span>
+        <span onclick="avaliar(4)">★</span>
+        <span onclick="avaliar(5)">★</span>
+    </div>
+
+    <textarea id="feedback" placeholder="Deixe sua opinião..."></textarea>
+
+    <button onclick="enviarFeedback()">Enviar</button>
+</div>
+
+
+    <script src="scripts.js"></script>
+</body>
+</html>
