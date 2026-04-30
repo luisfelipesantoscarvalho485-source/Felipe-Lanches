@@ -188,7 +188,7 @@ function fecharFeedback() {
 
 
 function gerarMensagem() {
-    const mesa = document.getElementById("mesa").value;
+    const mesa = document.getElementById("mesa").value.trim();
     const pagamento = document.getElementById("pagamento").value;
 
    if (carrinho.length === 0) {
