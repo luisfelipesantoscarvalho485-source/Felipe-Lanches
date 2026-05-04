@@ -50,7 +50,7 @@ html, body{
 .Itens, .coluna {
     flex: 1;
     max-width: 300px;
-}
+}   
 
 .Burger:hover {
     transform: translateY(-5px) scale(1.02);
