@@ -51,24 +51,7 @@ html, body{
     flex: 1;
     max-width: 300px;
 }
-.coluna{
-    background: #000000;
-    color: rgb(255, 247, 247);
-    padding: 10px;
-    margin-top: 10px;
-    border-radius: 15px;
-    box-sizing: border-box;
-    width: 100%; /* importante */
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    flex-wrap: wrap;
-    align-self: flex-start;
-    min-height: auto;
 
-
-}
 .Burger:hover {
     transform: translateY(-5px) scale(1.02);
     transition: 0.03s;
